@@ -110,10 +110,10 @@ public class Library {
     File f1 = new File("Book.txt");
     if(!f1.exists())
       f1.createNewFile();
-    File f2 = new File("Book.txt");
+    File f2 = new File("Student.txt");
     if(!f2.exists())
       f2.createNewFile();
-    File f3 = new File("Book.txt");
+    File f3 = new File("Teacher.txt");
     if(!f3.exists())
       f3.createNewFile();
     
