@@ -105,13 +105,24 @@ public class Library {
     return;
   }
   
-  public static void initializeArrays(ArrayList<Book> books, ArrayList<Student> students, ArrayList<Teacher> teachers) throws IOException {
+  public static void initializeArrays(ArrayList<Book> books, ArrayList<Student> students, ArrayList<Teacher> teachers) 
+    throws IOException {
+    File f1 = new File("Book.txt");
+    if(!f1.exists())
+      f1.createNewFile();
+    File f2 = new File("Book.txt");
+    if(!f2.exists())
+      f2.createNewFile();
+    File f3 = new File("Book.txt");
+    if(!f3.exists())
+      f3.createNewFile();
+    
     //Intializes the arrays
-    BufferedReader br1 = new BufferedReader(new FileReader("Book.txt"));
+    BufferedReader br1 = new BufferedReader(new FileReader(f1));
     String line1 = null;
-    BufferedReader br2 = new BufferedReader(new FileReader("Teacher.txt"));
+    BufferedReader br2 = new BufferedReader(new FileReader(f2));
     String line2 = null;
-    BufferedReader br3 = new BufferedReader(new FileReader("Student.txt"));
+    BufferedReader br3 = new BufferedReader(new FileReader(f3));
     String line3 = null;
     
     if ((line1 = br1.readLine()) != null && (line2 = br2.readLine()) != null && (line3 = br3.readLine()) != null) {
